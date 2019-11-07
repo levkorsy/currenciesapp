@@ -1,0 +1,223 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+h1 {
+  font-size: 62px;
+}
+
+.card {
+  margin: 10px;
+  overflow: visible;
+  min-width: 250px;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.more-info-card {
+  max-width: 240px;
+}
+
+.moreInfo {
+  color: gray;
+}
+#wait {
+  display: none;
+}
+.navbar-brand {
+  float: right;
+}
+.d-block {
+  width: 100%;
+}
+
+.delete-coin {
+  float: right;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  float: right;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #feb62c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  /* float: right; */
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.modal-item {
+  font-size: 20px;
+}
+.modal-header {
+  color: #6c757d;
+}
+.input-wrapper {
+  width: 100%;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #feb62c;
+  border-bottom: 16px solid #feb62c;
+  width: 320px;
+  height: 320px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  left: 40%;
+  top: 40%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("/images/bitcoin-background.jpg");
+
+  /* background-image: url("./images/bitcoin-background.jpg"); */
+  /* background-image: url("https://www.incrypts.com/wp-content/uploads/2018/01/New-User-Registration-on-Cryptonit-Exchange-Platform-820x500.jpeg"); */
+
+  /* background-image: url("https://www.w3schools.com/howto/img_parallax.jpg"); */
+
+  /* Set a specific height */
+  min-height: 350px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: #a1b3bf solid 1px;
+  background-position-y: -119px;
+}
+
+#searchInput:focus {
+  border-color: #feb62c;
+}
+
+a.nav-link {
+  color: #feb62c;
+}
+button.btn-warning {
+  color: #6c757d;
+}
+p.card-header {
+  border: none;
+  font-size: 27px;
+  color: #6c757d;
+  padding: inherit;
+  background-color: inherit;
+}
+p.card-text {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
+  color: darkslategray;
+}
+.slider:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.modal-body {
+  background-color: #6c757d;
+  color: white;
+}

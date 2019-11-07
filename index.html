@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cryptonite</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/custom.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+
+    <script src="./scripts/custom.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/ajaxFunc.js"></script>
+    <script src="./scripts/localStor.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 style="color: #A1B3BF">Cryptonite</h1>
+
+      <div class="parallax" style="min-width: 300px"></div>
+
+      <nav
+        class="navbar navbar-dark navbar-expand-sm bg-secondary text-white justify-content-between"
+        style="min-width: 300px"
+      >
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              data-toggle="tab"
+              href="#home"
+              onclick="getCoinAjax1(), deleteSpecialCoins()"
+              >Currencies</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#graf" onclick="graf()"
+              >Live report</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#about">About us</a>
+          </li>
+        </ul>
+        <form class="form-inline">
+          <input
+            class="form-control mt-1"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            id="searchInput"
+          />
+          <button
+            class="btn btn-warning ml-2 mt-1"
+            type="button"
+            onclick="searchCurrencies()"
+          >
+            Search
+          </button>
+        </form>
+      </nav>
+      <!-- Tab panes -->
+      <div
+        class="tab-content"
+        style="height:100%; min-height: 500px; min-width: 200px;"
+      >
+        <div class="tab-pane container active" id="home">
+          <div class="row" id="output">
+            <!-- Main content -->
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="graf">
+          <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+        </div>
+        <div class="tab-pane container fade" id="about">
+          <div class="container">
+            <div class="card col-12" style="width:400px; transform:none">
+              <img
+                class="card-img-top"
+                src="./images/full-stack-development-by-weblineindia.jpg"
+                alt="Card image"
+                style="width:100%"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Lev Korsunsky</h4>
+                <p>
+                  This is the second project of the JB curse.
+                </p>
+                <p>
+                  Includes JS, Jquery, Ajax, API.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title text-center">
+                You have to choose only 5 currencies. Please delete one of them.
+              </h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">
+          © 2019 Copyright:
+          <a href="#" style="color: #FFC107"> Korsunsky Lev</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="loader"></div>
+    <!-- Footer -->
+  </body>
+</html>
